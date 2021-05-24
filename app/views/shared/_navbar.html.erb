@@ -11,14 +11,27 @@
         </li>
         <li class="nav-item">
           <%= link_to "Jobs", jobs_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sign Up</a>
-        </li>
+        </li>     
       </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if Current.user %>
+          <li class="nav-item">
+            <%=link_to Current.user.email, edit_password_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">  
+            <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign Up", sign_up_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", sign_in_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </nav>
