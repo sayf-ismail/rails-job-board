@@ -14,13 +14,10 @@ class JobsTest < ApplicationSystemTestCase
     visit jobs_url
     click_on "New Job"
 
-    fill_in "Dropoff address", with: @job.dropoff_address
+    fill_in "Address1", with: @job.address1
     fill_in "Getter", with: @job.getter_id
-    fill_in "Lat1", with: @job.lat1
-    fill_in "Lat2", with: @job.lat2
-    fill_in "Lon1", with: @job.lon1
-    fill_in "Lon2", with: @job.lon2
-    fill_in "Pickup address", with: @job.pickup_address
+    fill_in "Latitude", with: @job.latitude
+    fill_in "Longitude", with: @job.longitude
     fill_in "User", with: @job.user_id
     click_on "Create Job"
 
@@ -32,13 +29,10 @@ class JobsTest < ApplicationSystemTestCase
     visit jobs_url
     click_on "Edit", match: :first
 
-    fill_in "Dropoff address", with: @job.dropoff_address
+    fill_in "Address1", with: @job.address1
     fill_in "Getter", with: @job.getter_id
-    fill_in "Lat1", with: @job.lat1
-    fill_in "Lat2", with: @job.lat2
-    fill_in "Lon1", with: @job.lon1
-    fill_in "Lon2", with: @job.lon2
-    fill_in "Pickup address", with: @job.pickup_address
+    fill_in "Latitude", with: @job.latitude
+    fill_in "Longitude", with: @job.longitude
     fill_in "User", with: @job.user_id
     click_on "Update Job"
 
