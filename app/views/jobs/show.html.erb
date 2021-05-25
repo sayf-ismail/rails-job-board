@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @job.user_id %>
+</p>
+
+<p>
+  <strong>Pickup address:</strong>
+  <%= @job.pickup_address %>
+</p>
+
+<p>
+  <strong>Lat1:</strong>
+  <%= @job.lat1 %>
+</p>
+
+<p>
+  <strong>Lon1:</strong>
+  <%= @job.lon1 %>
+</p>
+
+<p>
+  <strong>Dropoff address:</strong>
+  <%= @job.dropoff_address %>
+</p>
+
+<p>
+  <strong>Lat2:</strong>
+  <%= @job.lat2 %>
+</p>
+
+<p>
+  <strong>Lon2:</strong>
+  <%= @job.lon2 %>
+</p>
+
+<p>
+  <strong>Getter:</strong>
+  <%= @job.getter_id %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
