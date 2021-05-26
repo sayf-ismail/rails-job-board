@@ -7,8 +7,11 @@
     <tr>
       <th>User</th>
       <th>Address1</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
+      <th>Lat1</th>
+      <th>Long1</th>
+      <th>Address2</th>
+      <th>Lat2</th>
+      <th>Long2</th>
       <th>Getter</th>
       <th colspan="3"></th>
     </tr>
@@ -19,8 +22,11 @@
       <tr>
         <td><%= job.user_id %></td>
         <td><%= job.address1 %></td>
-        <td><%= job.latitude %></td>
-        <td><%= job.longitude %></td>
+        <td><%= job.lat1 %></td>
+        <td><%= job.long1 %></td>
+        <td><%= job.address2 %></td>
+        <td><%= job.lat2 %></td>
+        <td><%= job.long2 %></td>
         <td><%= job.getter_id %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>

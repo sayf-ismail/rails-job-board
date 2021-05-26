@@ -15,9 +15,12 @@ class JobsTest < ApplicationSystemTestCase
     click_on "New Job"
 
     fill_in "Address1", with: @job.address1
+    fill_in "Address2", with: @job.address2
     fill_in "Getter", with: @job.getter_id
-    fill_in "Latitude", with: @job.latitude
-    fill_in "Longitude", with: @job.longitude
+    fill_in "Lat1", with: @job.lat1
+    fill_in "Lat2", with: @job.lat2
+    fill_in "Long1", with: @job.long1
+    fill_in "Long2", with: @job.long2
     fill_in "User", with: @job.user_id
     click_on "Create Job"
 
@@ -30,9 +33,12 @@ class JobsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Address1", with: @job.address1
+    fill_in "Address2", with: @job.address2
     fill_in "Getter", with: @job.getter_id
-    fill_in "Latitude", with: @job.latitude
-    fill_in "Longitude", with: @job.longitude
+    fill_in "Lat1", with: @job.lat1
+    fill_in "Lat2", with: @job.lat2
+    fill_in "Long1", with: @job.long1
+    fill_in "Long2", with: @job.long2
     fill_in "User", with: @job.user_id
     click_on "Update Job"
 

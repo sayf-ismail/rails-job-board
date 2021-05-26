@@ -3,13 +3,19 @@
 one:
   user: one
   address1: MyString
-  latitude: 1.5
-  longitude: 1.5
+  lat1: 1.5
+  long1: 1.5
+  address2: MyString
+  lat2: 1.5
+  long2: 1.5
   getter_id: 1
 
 two:
   user: two
   address1: MyString
-  latitude: 1.5
-  longitude: 1.5
+  lat1: 1.5
+  long1: 1.5
+  address2: MyString
+  lat2: 1.5
+  long2: 1.5
   getter_id: 1

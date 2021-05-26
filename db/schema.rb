@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_25_044630) do
+ActiveRecord::Schema.define(version: 2021_05_26_120528) do
 
   create_table "jobs", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "address1"
-    t.float "latitude"
-    t.float "longitude"
+    t.float "lat1"
+    t.float "long1"
+    t.string "address2"
+    t.float "lat2"
+    t.float "long2"
     t.integer "getter_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
