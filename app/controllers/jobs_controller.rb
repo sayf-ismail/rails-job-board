@@ -6,6 +6,14 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
+  def createdjobs
+    @jobs = Job.all
+  end
+
+  def claimedjobs
+    @jobs = Job.all
+  end
+
   # GET /jobs/1 or /jobs/1.json
   def show
   end
@@ -17,6 +25,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/1/edit
   def edit
+    
   end
 
   # POST /jobs or /jobs.json

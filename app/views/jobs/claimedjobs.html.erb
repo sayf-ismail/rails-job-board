@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Claimed Jobs</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Address1</th>
+      <th>Lat1</th>
+      <th>Long1</th>
+      <th>Address2</th>
+      <th>Lat2</th>
+      <th>Long2</th>
+      <th>Getter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <% if Current.user.id == job.getter_id%>
+        <tr>
+          <td><%= job.user_id %></td>
+          <td><%= job.address1 %></td>
+          <td><%= job.lat1 %></td>
+          <td><%= job.long1 %></td>
+          <td><%= job.address2 %></td>
+          <td><%= job.lat2 %></td>
+          <td><%= job.long2 %></td>
+          <td><%= job.getter_id %></td>
+          <td><%= link_to 'Show', job %></td>
+          <td><%= link_to 'Edit Job', edit_job_path(job) %></td>
+          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>

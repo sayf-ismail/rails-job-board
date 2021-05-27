@@ -2,7 +2,7 @@
 
 <h1>Jobs</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>User</th>
@@ -29,7 +29,7 @@
         <td><%= job.long2 %></td>
         <td><%= job.getter_id %></td>
         <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td class= "btn btn-secondary"><%= link_to 'Claim Job', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

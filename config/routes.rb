@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   resources :jobs
   get "jobs", to: "jobs#index"
+  get "created_jobs", to: "jobs#createdjobs"
+  get "claimed_jobs", to: "jobs#claimedjobs"
 
   get "password", to: "passwords#edit", as: :edit_password
   patch "password", to: "passwords#update"
