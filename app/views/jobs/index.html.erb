@@ -2,7 +2,7 @@
 
 <h1>Jobs</h1>
 
-<h2>User Location: <%= @location.first.coordinates %></h2>
+<h2>Your Current Location: <%= @location.first.coordinates %></h2>
 
 <table class="table table-striped table-bordered">
   <thead class="thead-dark">
@@ -36,7 +36,7 @@
             <%= Geocoder::Calculations.distance_between(
             # @location.first.coordinates, 
             [job.lat1, job.long1],
-            [40.748433,-73.985655] 
+            @location.first.coordinates 
             ) * @KM_IN_MILES %>
           </td>
           <td><%= link_to 'Show', job %></td>
