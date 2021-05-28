@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2021_05_26_120528) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "jobs", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "address1"
     t.float "lat1"
     t.float "long1"
