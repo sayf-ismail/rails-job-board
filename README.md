@@ -1,6 +1,6 @@
 # Ruby on Rails Job Board App
 
-### Gratitude on the Go!
+### Connecting Getters to Delivery Jobs!
 
 **Here is the link to use the app: https://sayf-geojobs.herokuapp.com/**
 ***
