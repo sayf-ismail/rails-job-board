@@ -37,7 +37,7 @@
             # @location.first.coordinates, 
             [job.lat1, job.long1],
             @location.first.coordinates 
-            ) * @KM_IN_MILES %>
+            ) / @KM_IN_MILES %>
           </td>
           <td><%= link_to 'Show', job %></td>
           <% if Current.user.id != job.user_id%>
