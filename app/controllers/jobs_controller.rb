@@ -1,9 +1,15 @@
 class JobsController < ApplicationController
   before_action :set_job, only: %i[ show edit update destroy ]
 
+
+
   # GET /jobs or /jobs.json
   def index
     @jobs = Job.all
+    ip = request.remote_ip || "127.0.0.1:3000"
+    @location = Geocoder.search(ip)
+    @KM_IN_MILES = 0.621371192
+    
   end
 
   def createdjobs
