@@ -1,24 +1,33 @@
-# README
+# Ruby on Rails Job Board App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Gratitude on the Go!
 
-Things you may want to cover:
+**Here is the link to use the app: https://sayf-geojobs.herokuapp.com/**
+***
+**Here are the features of the App**
 
-* Ruby version
+**Technologies used:**
+- Ruby on Rails
+- Postgresql
+- Heroku
+- HTML/CSS/Javascript
+- Geocoder Gem
 
-* System dependencies
+**While signed out**
+- Users can register sign in.
+- They cannot view jobs until signed in.
 
-* Configuration
+**When signed in**
+- Users can view all available jobs.
+- Users can view all jobs they created.
+- Users can view all jobs they have claimed. 
+- Users can claim and create jobs.
+- Job locations and addresses are visible.
+***
 
-* Database creation
+**Ways I solved for general problems were:**
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
++ Getting help from wiser teachers
++ Googling
++ W3Schools
++ Postgresql/Geocoder/Ruby documentation
