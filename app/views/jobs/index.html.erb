@@ -40,8 +40,11 @@
             ) * @KM_IN_MILES %>
           </td>
           <td><%= link_to 'Show', job %></td>
-          <td class= "btn btn-secondary"><%= link_to 'Claim Job', edit_job_path(job) %></td>
-          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if Current.user.id != job.user_id%>
+            <td class= "btn btn-secondary"><%= link_to 'Claim Job', edit_job_path(job) %></td>
+          <% else %>
+            <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         </tr>
       <% end %>
     <% end %>
