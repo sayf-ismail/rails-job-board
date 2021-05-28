@@ -5,11 +5,11 @@ class JobsController < ApplicationController
 
   # GET /jobs or /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.order(params[:sort])
     ip = request.remote_ip || "127.0.0.1:3000"
     @location = Geocoder.search(ip)
     @KM_IN_MILES = 0.621371192
-    
+
   end
 
   def createdjobs
@@ -71,6 +71,8 @@ class JobsController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
@@ -81,4 +83,13 @@ class JobsController < ApplicationController
     def job_params
       params.require(:job).permit(:user_id, :address1, :lat1, :long1, :address2, :lat2, :long2, :getter_id)
     end
+
+    # Calculate the distance between two points
+    # def calculate_distance(a, b)
+    #   Geocoder::Calculations.distance_between(a, b) * @KM_IN_MILES
+    # end
+    # def self.job_sorted_by_distance
+    #   Job.all.sort_by(&:calculate_distance)
+    # end
+
 end
